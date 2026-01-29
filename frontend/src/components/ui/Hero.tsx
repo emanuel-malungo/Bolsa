@@ -20,7 +20,7 @@ export default function Hero() {
                         className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight"
                         style={{ fontFamily: 'var(--font-dancing)' }}
                     >
-                        <span className="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                        <span className="bg-linear-to-r from-white to-blue-200 bg-clip-text text-transparent">
                             Transforme Seu Futuro
                         </span>
                         <br />
@@ -55,16 +55,16 @@ export default function Hero() {
                     </div>
 
                     {/* Stats */}
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 pt-8 sm:pt-12 max-w-xs sm:max-w-2xl mx-auto px-4">
+                    <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 pt-8 sm:pt-12 max-w-md sm:max-w-2xl mx-auto px-2 sm:px-4">
                         <div className="text-center">
                             <div 
-                                className="text-xl sm:text-2xl lg:text-3xl font-bold text-white"
+                                className="text-lg sm:text-2xl lg:text-3xl font-bold text-white"
                                 style={{ fontFamily: 'var(--font-dancing)' }}
                             >
                                 500+
                             </div>
                             <div 
-                                className="text-xs sm:text-sm text-gray-200 mt-1"
+                                className="text-xs sm:text-sm text-gray-200 mt-1 leading-tight"
                                 style={{ fontFamily: 'var(--font-poppins)' }}
                             >
                                 Universidades
@@ -72,13 +72,13 @@ export default function Hero() {
                         </div>
                         <div className="text-center">
                             <div 
-                                className="text-xl sm:text-2xl lg:text-3xl font-bold text-white"
+                                className="text-lg sm:text-2xl lg:text-3xl font-bold text-white"
                                 style={{ fontFamily: 'var(--font-dancing)' }}
                             >
                                 1000+
                             </div>
                             <div 
-                                className="text-xs sm:text-sm text-gray-200 mt-1"
+                                className="text-xs sm:text-sm text-gray-200 mt-1 leading-tight"
                                 style={{ fontFamily: 'var(--font-poppins)' }}
                             >
                                 Bolsas Disponíveis
@@ -86,13 +86,13 @@ export default function Hero() {
                         </div>
                         <div className="text-center">
                             <div 
-                                className="text-xl sm:text-2xl lg:text-3xl font-bold text-white"
+                                className="text-lg sm:text-2xl lg:text-3xl font-bold text-white"
                                 style={{ fontFamily: 'var(--font-poppins)' }}
                             >
                                 50+
                             </div>
                             <div 
-                                className="text-xs sm:text-sm text-gray-200 mt-1"
+                                className="text-xs sm:text-sm text-gray-200 mt-1 leading-tight"
                                 style={{ fontFamily: 'var(--font-poppins)' }}
                             >
                                 Países

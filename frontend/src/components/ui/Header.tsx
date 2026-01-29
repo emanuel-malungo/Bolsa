@@ -36,7 +36,7 @@ export default function Header() {
                             <h1 
                                 className={`text-xl sm:text-2xl lg:text-3xl font-bold transition-colors duration-300 ${
                                     isScrolled 
-                                        ? 'bg-gradient-to-r from-[#016EF8] to-blue-600 bg-clip-text text-transparent' 
+                                        ? 'bg-linear-to-r from-[#016EF8] to-blue-600 bg-clip-text text-transparent' 
                                         : 'text-white drop-shadow-lg'
                                 }`} 
                                 style={{ fontFamily: 'var(--font-dancing)' }}
@@ -116,50 +116,61 @@ export default function Header() {
             <div className={`md:hidden fixed inset-0 bg-black/50 z-40 transition-opacity duration-300 ${
                 isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
             }`} onClick={toggleMobileMenu}>
-                <div className={`absolute top-0 right-0 bg-white w-80 h-full shadow-2xl transform transition-transform duration-300 ${
+                <div className={`absolute top-0 right-0 bg-[#016EF8] w-80 h-full shadow-2xl transform transition-transform duration-300 ${
                     isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
                 }`} onClick={(e) => e.stopPropagation()}>
-                    <div className="p-6 pt-20">
+                    
+                    {/* Close Button */}
+                    <div className="flex justify-end p-4">
+                        <button 
+                            onClick={toggleMobileMenu}
+                            className="p-2 rounded-lg text-white hover:bg-white/10 transition-colors duration-200"
+                        >
+                            <X size={24} />
+                        </button>
+                    </div>
+
+                    <div className="p-6 pt-4">
                         <nav className="space-y-6" style={{ fontFamily: 'var(--font-poppins)' }}>
                             <Link 
                                 href="/" 
-                                className="block text-gray-800 hover:text-[#016EF8] font-medium text-lg transition-colors duration-200"
+                                className="block text-white hover:text-blue-100 font-medium text-lg transition-colors duration-200 py-2 border-b border-blue-400/20"
                                 onClick={toggleMobileMenu}
                             >
                                 Home
                             </Link>
                             <Link 
                                 href="/" 
-                                className="block text-gray-800 hover:text-[#016EF8] font-medium text-lg transition-colors duration-200"
+                                className="block text-white hover:text-blue-100 font-medium text-lg transition-colors duration-200 py-2 border-b border-blue-400/20"
                                 onClick={toggleMobileMenu}
                             >
                                 Sobre
                             </Link>
                             <Link 
                                 href="/about" 
-                                className="block text-gray-800 hover:text-[#016EF8] font-medium text-lg transition-colors duration-200"
+                                className="block text-white hover:text-blue-100 font-medium text-lg transition-colors duration-200 py-2 border-b border-blue-400/20"
                                 onClick={toggleMobileMenu}
                             >
                                 Como funciona
                             </Link>
                             <Link 
                                 href="/about" 
-                                className="block text-gray-800 hover:text-[#016EF8] font-medium text-lg transition-colors duration-200"
+                                className="block text-white hover:text-blue-100 font-medium text-lg transition-colors duration-200 py-2 border-b border-blue-400/20"
                                 onClick={toggleMobileMenu}
                             >
                                 Explorar bolsas
                             </Link>
                         </nav>
                         
-                        <div className="mt-8 space-y-4" style={{ fontFamily: 'var(--font-poppins)' }}>
+                        <div className="mt-10 space-y-4" style={{ fontFamily: 'var(--font-poppins)' }}>
                             <button 
-                                className="w-full px-6 py-3 text-[#016EF8] border-2 border-[#016EF8] rounded-full font-semibold hover:bg-[#016EF8] hover:text-white transition-colors duration-200"
+                                className="w-full px-6 py-3 text-white border-2 border-white rounded-full font-semibold hover:bg-white hover:text-[#016EF8] transition-colors duration-200"
                                 onClick={toggleMobileMenu}
                             >
                                 Entrar
                             </button>
                             <button 
-                                className="w-full px-6 py-3 bg-[#016EF8] text-white rounded-full font-semibold hover:bg-blue-700 transition-colors duration-200 shadow-md hover:shadow-lg"
+                                className="w-full px-6 py-3 bg-white text-[#016EF8] rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-md hover:shadow-lg"
                                 onClick={toggleMobileMenu}
                             >
                                 Criar Conta
