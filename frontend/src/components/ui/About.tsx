@@ -82,7 +82,7 @@ export default function About() {
                 </div>
 
                 {/* Stats Section */}
-                <div className="bg-gradient-to-r from-[#016EF8] to-blue-600 rounded-2xl p-8 sm:p-12 text-white text-center">
+                <div className="bg-linear-to-r from-[#016EF8] to-blue-600 rounded-2xl p-8 sm:p-12 text-white text-center">
                     <h3 
                         className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8"
                         style={{ fontFamily: 'var(--font-dancing)' }}
