@@ -107,16 +107,22 @@ export default function Header() {
                     </button>
 
                     <div className="hidden md:flex items-center gap-2 sm:gap-3 lg:gap-4" style={{ fontFamily: 'var(--font-poppins)' }}>
-                        <button className={`px-3 sm:px-4 lg:px-6 py-2 lg:py-2.5 border-2 rounded-full font-semibold transition-colors duration-200 text-xs sm:text-sm lg:text-base ${
-                            isScrolled 
-                                ? 'text-[#016EF8] border-[#016EF8] hover:bg-[#016EF8] hover:text-white' 
-                                : 'text-white border-white hover:bg-white hover:text-gray-800'
-                        }`}>
+                        <Link 
+                            href="/login"
+                            className={`px-3 sm:px-4 lg:px-6 py-2 lg:py-2.5 border-2 rounded-full font-semibold transition-colors duration-200 text-xs sm:text-sm lg:text-base ${
+                                isScrolled 
+                                    ? 'text-[#016EF8] border-[#016EF8] hover:bg-[#016EF8] hover:text-white' 
+                                    : 'text-white border-white hover:bg-white hover:text-gray-800'
+                            }`}
+                        >
                             Entrar
-                        </button>
-                        <button className="px-3 sm:px-4 lg:px-6 py-2 lg:py-2.5 bg-[#016EF8] text-white rounded-full font-semibold hover:bg-blue-700 transition-colors duration-200 shadow-md hover:shadow-lg text-xs sm:text-sm lg:text-base">
+                        </Link>
+                        <Link 
+                            href="/register"
+                            className="px-3 sm:px-4 lg:px-6 py-2 lg:py-2.5 bg-[#016EF8] text-white rounded-full font-semibold hover:bg-blue-700 transition-colors duration-200 shadow-md hover:shadow-lg text-xs sm:text-sm lg:text-base"
+                        >
                             Criar Conta
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </nav>
@@ -179,18 +185,20 @@ export default function Header() {
                         </nav>
                         
                         <div className="mt-10 space-y-4" style={{ fontFamily: 'var(--font-poppins)' }}>
-                            <button 
-                                className="w-full px-6 py-3 text-white border-2 border-white rounded-full font-semibold hover:bg-white hover:text-[#016EF8] transition-colors duration-200"
+                            <Link 
+                                href="/login"
+                                className="block w-full px-6 py-3 text-white border-2 border-white rounded-full font-semibold hover:bg-white hover:text-[#016EF8] transition-colors duration-200 text-center"
                                 onClick={toggleMobileMenu}
                             >
                                 Entrar
-                            </button>
-                            <button 
-                                className="w-full px-6 py-3 bg-white text-[#016EF8] rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-md hover:shadow-lg"
+                            </Link>
+                            <Link 
+                                href="/register"
+                                className="block w-full px-6 py-3 bg-white text-[#016EF8] rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-md hover:shadow-lg text-center"
                                 onClick={toggleMobileMenu}
                             >
                                 Criar Conta
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
