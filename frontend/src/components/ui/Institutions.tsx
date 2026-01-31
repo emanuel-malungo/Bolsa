@@ -1,98 +1,76 @@
-import { GraduationCap, Building, Globe } from "lucide-react";
+import { GraduationCap, Building, Globe, BookOpen, Users, Award } from "lucide-react";
 
 export default function Institutions() {
     const institutions = [
         {
             name: "Harvard University",
-            icon: <GraduationCap className="w-8 h-8 sm:w-10 sm:h-10" />,
-            country: "Estados Unidos"
+            icon: <GraduationCap className="w-6 h-6" />
         },
         {
             name: "Oxford University",
-            icon: <Building className="w-8 h-8 sm:w-10 sm:h-10" />,
-            country: "Reino Unido"
+            icon: <Building className="w-6 h-6" />
         },
         {
             name: "MIT",
-            icon: <Globe className="w-8 h-8 sm:w-10 sm:h-10" />,
-            country: "Estados Unidos"
+            icon: <Globe className="w-6 h-6" />
         },
         {
             name: "Stanford University",
-            icon: <GraduationCap className="w-8 h-8 sm:w-10 sm:h-10" />,
-            country: "Estados Unidos"
+            icon: <BookOpen className="w-6 h-6" />
         },
         {
             name: "Cambridge University",
-            icon: <Building className="w-8 h-8 sm:w-10 sm:h-10" />,
-            country: "Reino Unido"
+            icon: <Users className="w-6 h-6" />
         },
         {
             name: "University of Toronto",
-            icon: <Globe className="w-8 h-8 sm:w-10 sm:h-10" />,
-            country: "Canadá"
+            icon: <Award className="w-6 h-6" />
+        },
+        {
+            name: "Yale University",
+            icon: <GraduationCap className="w-6 h-6" />
+        },
+        {
+            name: "Princeton University",
+            icon: <Building className="w-6 h-6" />
         }
     ];
 
     return (
-        <section className="py-16 sm:py-20 lg:py-24 bg-gray-50">
+        <section id="institutions" className="py-16 sm:py-20 lg:py-24 bg-white">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-12 sm:mb-16">
+                <div className="text-center mb-12">
                     <h2 
-                        className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-4"
+                        className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800"
                         style={{ fontFamily: 'var(--font-dancing)' }}
                     >
                         Principais Instituições
                     </h2>
-                    <p 
-                        className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto"
-                        style={{ fontFamily: 'var(--font-poppins)' }}
-                    >
-                        Conecte-se com as melhores universidades do mundo e transforme seu futuro acadêmico
-                    </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+                <div className="flex flex-wrap justify-center gap-4 sm:gap-6 max-w-6xl mx-auto">
                     {institutions.map((institution, index) => (
                         <div 
                             key={index}
-                            className="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center group hover:scale-105 transform transition-transform duration-300"
+                            className="flex items-center gap-3 bg-gray-50 hover:bg-[#016EF8] hover:text-white px-4 py-3 rounded-full transition-all duration-300 group cursor-pointer"
                         >
-                            <div className="flex justify-center mb-4">
-                                <div className="p-4 bg-[#016EF8]/10 rounded-full text-[#016EF8] group-hover:bg-[#016EF8] group-hover:text-white transition-colors duration-300">
-                                    {institution.icon}
-                                </div>
+                            <div className="text-[#016EF8] group-hover:text-white transition-colors duration-300">
+                                {institution.icon}
                             </div>
                             
-                            <h3 
-                                className="text-xl sm:text-2xl font-bold text-gray-800 mb-2"
-                                style={{ fontFamily: 'var(--font-dancing)' }}
-                            >
-                                {institution.name}
-                            </h3>
-                            
-                            <p 
-                                className="text-sm sm:text-base text-gray-600"
+                            <span 
+                                className="text-gray-700 group-hover:text-white font-medium text-sm sm:text-base transition-colors duration-300"
                                 style={{ fontFamily: 'var(--font-poppins)' }}
                             >
-                                {institution.country}
-                            </p>
-                            
-                            <div className="mt-4 pt-4 border-t border-gray-100">
-                                <button 
-                                    className="text-[#016EF8] hover:text-blue-700 font-medium text-sm sm:text-base transition-colors duration-200"
-                                    style={{ fontFamily: 'var(--font-poppins)' }}
-                                >
-                                    Ver Bolsas Disponíveis →
-                                </button>
-                            </div>
+                                {institution.name}
+                            </span>
                         </div>
                     ))}
                 </div>
 
-                <div className="text-center mt-12 sm:mt-16">
+                <div className="text-center mt-12">
                     <button 
-                        className="px-8 py-4 bg-[#016EF8] text-white rounded-full font-semibold text-base sm:text-lg hover:bg-blue-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
+                        className="px-8 py-3 bg-[#016EF8] text-white rounded-full font-semibold text-base hover:bg-blue-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
                         style={{ fontFamily: 'var(--font-poppins)' }}
                     >
                         Ver Todas as Instituições

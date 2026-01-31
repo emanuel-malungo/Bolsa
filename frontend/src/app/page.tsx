@@ -2,8 +2,8 @@ import Header from "@/components/ui/Header"
 import Hero from "@/components/ui/Hero"
 import Institutions from "@/components/ui/Institutions"
 import About from "@/components/ui/About"
-import HowItWorks from "@/components/ui/HowItWorks"
 import ExploreScholarships from "@/components/ui/ExploreScholarships"
+import FAQ from "@/components/ui/FAQ"
 import Footer from "@/components/ui/Footer"
 
 export default function Home() {
@@ -13,8 +13,8 @@ export default function Home() {
       <Hero />
       <Institutions />
       <About />
-      <HowItWorks />
       <ExploreScholarships />
+      <FAQ />
       <Footer />
     </div>
   );

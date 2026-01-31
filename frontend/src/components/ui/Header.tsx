@@ -56,7 +56,7 @@ export default function Header() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/" className={`font-medium transition-colors duration-200 text-sm lg:text-base ${
+                                <Link href="#about" className={`font-medium transition-colors duration-200 text-sm lg:text-base ${
                                     isScrolled 
                                         ? 'text-gray-700 hover:text-[#016EF8]' 
                                         : 'text-white hover:text-blue-200'
@@ -65,21 +65,30 @@ export default function Header() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/about" className={`font-medium transition-colors duration-200 text-sm lg:text-base ${
+                                <Link href="#institutions" className={`font-medium transition-colors duration-200 text-sm lg:text-base ${
                                     isScrolled 
                                         ? 'text-gray-700 hover:text-[#016EF8]' 
                                         : 'text-white hover:text-blue-200'
                                 }`}>
-                                    Como funciona
+                                    Instituições
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/about" className={`font-medium transition-colors duration-200 text-sm lg:text-base ${
+                                <Link href="#scholarships" className={`font-medium transition-colors duration-200 text-sm lg:text-base ${
                                     isScrolled 
                                         ? 'text-gray-700 hover:text-[#016EF8]' 
                                         : 'text-white hover:text-blue-200'
                                 }`}>
-                                    Explorar bolsas
+                                    Bolsas
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="#contact" className={`font-medium transition-colors duration-200 text-sm lg:text-base ${
+                                    isScrolled 
+                                        ? 'text-gray-700 hover:text-[#016EF8]' 
+                                        : 'text-white hover:text-blue-200'
+                                }`}>
+                                    Contato
                                 </Link>
                             </li>
                         </ul>
@@ -140,25 +149,32 @@ export default function Header() {
                                 Home
                             </Link>
                             <Link 
-                                href="/" 
+                                href="#about" 
                                 className="block text-white hover:text-blue-100 font-medium text-lg transition-colors duration-200 py-2 border-b border-blue-400/20"
                                 onClick={toggleMobileMenu}
                             >
                                 Sobre
                             </Link>
                             <Link 
-                                href="/about" 
+                                href="#institutions" 
                                 className="block text-white hover:text-blue-100 font-medium text-lg transition-colors duration-200 py-2 border-b border-blue-400/20"
                                 onClick={toggleMobileMenu}
                             >
-                                Como funciona
+                                Instituições
                             </Link>
                             <Link 
-                                href="/about" 
+                                href="#scholarships" 
                                 className="block text-white hover:text-blue-100 font-medium text-lg transition-colors duration-200 py-2 border-b border-blue-400/20"
                                 onClick={toggleMobileMenu}
                             >
-                                Explorar bolsas
+                                Bolsas
+                            </Link>
+                            <Link 
+                                href="#contact" 
+                                className="block text-white hover:text-blue-100 font-medium text-lg transition-colors duration-200 py-2 border-b border-blue-400/20"
+                                onClick={toggleMobileMenu}
+                            >
+                                Contato
                             </Link>
                         </nav>
                         
