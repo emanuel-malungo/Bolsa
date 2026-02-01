@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { ChevronRight, ChevronLeft, User, GraduationCap, Globe, DollarSign, CheckCircle } from "lucide-react";
 import Link from "next/link";
 
@@ -20,6 +21,7 @@ type FormData = {
 };
 
 export default function CreateProfile() {
+    const router = useRouter();
     const [currentStep, setCurrentStep] = useState(1);
     const [formData, setFormData] = useState<FormData>({
         country: "",
@@ -76,7 +78,8 @@ export default function CreateProfile() {
 
     const handleFinish = () => {
         console.log("Profile completed:", formData);
-        // Aqui seria o redirecionamento para ver bolsas recomendadas
+        // Redirecionar para o dashboard
+        router.push('/user/dashboard');
     };
 
     const countries = [
