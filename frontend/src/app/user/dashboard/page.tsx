@@ -159,7 +159,7 @@ export default function Dashboard() {
                     {recommendedScholarships.slice(0, 6).map((scholarship) => (
                         <ScholarshipCard
                             key={scholarship.id}
-                            {...scholarship}
+                            scholarship={scholarship}
                             isFavorite={favorites.includes(scholarship.id)}
                             onToggleFavorite={handleToggleFavorite}
                             showCompatibility={true}

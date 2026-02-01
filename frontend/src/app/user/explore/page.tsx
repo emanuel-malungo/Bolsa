@@ -273,7 +273,7 @@ export default function ExploreScholarships() {
                         {filteredScholarships.map((scholarship) => (
                             <ScholarshipCard
                                 key={scholarship.id}
-                                {...scholarship}
+                                scholarship={scholarship}
                                 isFavorite={favorites.includes(scholarship.id)}
                                 onToggleFavorite={handleToggleFavorite}
                                 showCompatibility={true}

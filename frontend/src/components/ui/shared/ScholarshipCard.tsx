@@ -2,32 +2,54 @@ import Link from "next/link";
 import { MapPin, Clock, DollarSign, Heart, ExternalLink, Star } from "lucide-react";
 
 interface ScholarshipCardProps {
-    id: string;
-    title: string;
-    university: string;
-    country: string;
-    type: string;
-    deadline: string;
-    value: string;
+    id?: string;
+    title?: string;
+    university?: string;
+    country?: string;
+    type?: string;
+    deadline?: string;
+    value?: string;
     compatibility?: number;
     isFavorite?: boolean;
     onToggleFavorite?: (id: string) => void;
     showCompatibility?: boolean;
+    scholarship?: {
+        id: string;
+        title: string;
+        university: string;
+        country: string;
+        type: string;
+        deadline: string;
+        value: string;
+        compatibility?: number;
+    };
 }
 
-export default function ScholarshipCard({
-    id,
-    title,
-    university,
-    country,
-    type,
-    deadline,
-    value,
-    compatibility,
-    isFavorite = false,
-    onToggleFavorite,
-    showCompatibility = false
-}: ScholarshipCardProps) {
+export default function ScholarshipCard(props: ScholarshipCardProps) {
+    // Suporta ambos os formatos: propriedades individuais e objeto scholarship
+    const {
+        id: propId,
+        title: propTitle,
+        university: propUniversity,
+        country: propCountry,
+        type: propType,
+        deadline: propDeadline,
+        value: propValue,
+        compatibility: propCompatibility,
+        isFavorite = false,
+        onToggleFavorite,
+        showCompatibility = false,
+        scholarship
+    } = props;
+
+    const id = scholarship?.id || propId || "";
+    const title = scholarship?.title || propTitle || "";
+    const university = scholarship?.university || propUniversity || "";
+    const country = scholarship?.country || propCountry || "";
+    const type = scholarship?.type || propType || "";
+    const deadline = scholarship?.deadline || propDeadline || "";
+    const value = scholarship?.value || propValue || "";
+    const compatibility = scholarship?.compatibility || propCompatibility;
     return (
         <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-200">
             <div className="p-6">
